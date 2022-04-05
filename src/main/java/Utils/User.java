@@ -1,10 +1,10 @@
-package dev.selenium.getting_started;
+package Utils;
 
 public class User {
-    private String name_;
-    private String login_;
-    private String password_;
-    User(String name, String login, String password)
+    private final String name_;
+    private final String login_;
+    private final String password_;
+    public User(String name, String login, String password)
     {
         name_ = name;
         login_ = login;
