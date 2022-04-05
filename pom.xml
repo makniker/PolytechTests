@@ -17,21 +17,15 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-<<<<<<< HEAD
             <version>4.0.0</version>
-=======
-            <version>LATEST</version>
->>>>>>> b8ced45 (Added first version)
+            <version>LATEST</version>)
         </dependency>
 
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-<<<<<<< HEAD
             <version>5.1.0</version>
-=======
             <version>LATEST</version>
->>>>>>> b8ced45 (Added first version)
             <scope>test</scope>
         </dependency>
 
@@ -45,11 +39,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-<<<<<<< HEAD
-            <version>RELEASE</version>
-=======
             <version>LATEST</version>
->>>>>>> b8ced45 (Added first version)
             <scope>test</scope>
         </dependency>
 
