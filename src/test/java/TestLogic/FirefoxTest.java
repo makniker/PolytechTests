@@ -34,5 +34,6 @@ public class FirefoxTest {
         loginPage.logIn(testUser);
         MainPage mainPage = new Pages.MainPage(driver);
         mainPage.postSomething("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        Assertions.assertEquals(mainPage.getName(), testUser.getName());
     }
 }
