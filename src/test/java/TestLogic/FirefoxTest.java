@@ -49,7 +49,6 @@ public class FirefoxTest {
             MainPage mainPage = loginPage.logIn(testUser)
                     .addTextWindow(new TextWindow(driver))
                     .postSomething("Hello world");
-            Assertions.assertEquals(mainPage.getName(), testUser.getName());
             if (mainPage.textWindow_.isTextAdded("Hello world"))
             {
                 System.out.println("Test complete!");
