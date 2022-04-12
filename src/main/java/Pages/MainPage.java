@@ -1,46 +1,37 @@
 package Pages;
 
-import Utils.User;
+import Utils.TextWindow;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
+
 
 public class MainPage extends BasePage{
-    private class TextWindow
-    {
-        private String xPathToWindow = "//*[@data-module = 'postingForm/mediaText']";
-        private String xPathToButton = "posting_submit button-pro";
-        private WebDriver driver_;
-        public TextWindow(WebDriver driver)
-        {
-            driver_ = driver;
-        }
-        public TextWindow insertText(String text)
-        {
-            WebElement loginField = driver_.findElement(By.xpath(xPathToWindow));
-            loginField.sendKeys(text);
-            return this;
-        }
-
-        public TextWindow post()
-        {
-            driver_.findElement(By.xpath(xPathToButton)).click();
-            return this;
-        }
-     }
     public MainPage(WebDriver driver)
     {
         super(driver);
     }
-
-    public MainPage postSomething(String text)
+    boolean isThereTextWindow_ = false;
+    public Utils.TextWindow textWindow_;
+    public MainPage addTextWindow(Utils.TextWindow textWindow)
     {
-        String xPathToUserTopic = "//*[@class = 'pf-head_itx_a']";
-        WebElement topic = webDriver_.findElement(By.xpath(xPathToUserTopic));
-        topic.click();
-        TextWindow textWindow = new TextWindow(webDriver_).insertText(text);
-        textWindow.post();
+        isThereTextWindow_ = true;
+        textWindow_ = textWindow;
+        return this;
+    }
+    public MainPage postSomething(String text) throws Exception {
+        if (isThereTextWindow_)
+        {
+            String xPathToUserTopic = "//*[@class = 'pf-head_itx_a']";
+            WebElement topic = webDriver_.findElement(By.xpath(xPathToUserTopic));
+            topic.click();
+            textWindow_.insertText(text).post();
+        }
+        else
+        {
+            String error = "There is no wrapper";
+            throw new Exception(error);
+        }
         return this;
     }
 

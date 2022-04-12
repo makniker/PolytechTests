@@ -10,7 +10,7 @@ public class LoginPage extends BasePage{
         super(driver);
     }
 
-    public LoginPage logIn(User user)
+    public MainPage logIn(User user)
     {
         String xPathToPassword = "//*[@id = 'field_password']";
         String xPathToButton = "//*[@class = 'button-pro __wide']";
@@ -20,6 +20,6 @@ public class LoginPage extends BasePage{
         WebElement passwordField = webDriver_.findElement(By.xpath(xPathToPassword));
         passwordField.sendKeys(user.getPassword());
         webDriver_.findElement(By.xpath(xPathToButton)).click();
-        return this;
+        return new MainPage(webDriver_);
     }
 }
