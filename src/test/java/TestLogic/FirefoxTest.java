@@ -25,7 +25,7 @@ public class FirefoxTest {
         WebDriver driver = createDriver();
         try
         {
-            User testUser = new Utils.User("Никита Ермаков", "+79922228316", "Nikita123");
+            User testUser = new Utils.User("Никита Ермаков", "+79922228316", "*******");
             LoginPage loginPage = new Pages.LoginPage(driver);
             MainPage mainPage = loginPage.logIn(testUser);
             Assertions.assertEquals(mainPage.getName(), testUser.getName());
@@ -44,7 +44,7 @@ public class FirefoxTest {
         WebDriver driver = createDriver();
         try
         {
-            User testUser = new Utils.User("Никита Ермаков", "+79922228316", "Nikita123");
+            User testUser = new Utils.User("Никита Ермаков", "+79922228316", "*****");
             LoginPage loginPage = new Pages.LoginPage(driver);
             MainPage mainPage = loginPage.logIn(testUser)
                     .addTextWindow(new TextWindow(driver))
