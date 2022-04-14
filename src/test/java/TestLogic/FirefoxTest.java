@@ -11,7 +11,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
-public class FirefoxTest {
+public class FirefoxTest
+{
     public WebDriver createDriver()
     {
         WebDriverManager.firefoxdriver().setup();
