@@ -19,10 +19,11 @@ public class TextWindow
         return this;
     }
 
-    public boolean isTextAdded(String text)
+    public String getText()
     {
         String xPathToText = "//*[@class = 'media-text_a']";
-        return text.equals(driver_.findElement(By.xpath(xPathToText)).getText());
+        String text = driver_.findElement(By.xpath(xPathToText)).getText();
+        return text;
     }
 
     public TextWindow post()

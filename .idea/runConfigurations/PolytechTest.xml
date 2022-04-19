@@ -1,8 +1,8 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="PolytechTest" type="JUnit" factoryName="JUnit">
-    <module name="PolytechTests" />
-    <option name="PACKAGE_NAME" value="TestLogic" />
-    <option name="MAIN_CLASS_NAME" value="TestLogic.FirefoxTest" />
+    <module name="PolytechAutoTests" />
+    <option name="PACKAGE_NAME" value="TestLogic.LogInTest" />
+    <option name="MAIN_CLASS_NAME" value="TestLogic.LogInTest.LogInTest" />
     <option name="METHOD_NAME" value="" />
     <option name="TEST_OBJECT" value="class" />
     <method v="2">
